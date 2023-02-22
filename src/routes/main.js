@@ -2,9 +2,7 @@ const { Router } = require('express')
 const router = Router()
 
 router.get('/', (req, res) => {
-
-    res.sendStatus(200)
-
+    res.sendFile('src/public/html/home.html', { root: '.' })
 })
 
 module.exports = router

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie-edge'>
+        <link rel='shortcut icon' href='/assets/main-favicon.svg' type='image/x-icon'>
+        <link rel='stylesheet' href='/css/home.css' type='text/css'>
+        <title>Rother Forestry</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav class='header-navbar'>
+                <div>
+                    <img src='/assets/main-logo.svg'>
+                    <span>rotherforestry.co.uk</span>
+                </div>
+                <div>
+                    <a class='selected' href='/'>home</a>
+                    <span class='header-navbar-point'></span>
+                    <a href='/work'>work</a>
+                    <span class='header-navbar-point'></span>
+                    <a href='mailto:contact@rotherforestry.co.uk'>contact</a>
+                </div>
+            </nav>
+            <div class='header-content'>
+                <div class='header-text'>
+                    <h1>Rother<br><span>Forestry</span></h1>
+                    <p>Rother Forestry is a <b>well established</b> contractor dealing in everything wood. Management, felling, firewood, fencing, hard landscaping, mobile milling, decks and arbors.<br><br>Specializing in bespoke projects, designing, felling, milling and installation using our own locally sourced, sustainably managed timber. <a>Check out our work on Instagram!</a></p>
+                </div>
+                <div class='header-images'>
+                    <img class='hidden' src='/assets/photo-deck.png'>
+                    <img class='hidden' src='/assets/photo-fences.png'>
+                </div>
+            </div>
+        </header>
+
+    </body>
+
+    <script defer>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('show')
+                else entry.target.classList.remove('show')
+            })
+        })
+
+        const hiddenElements = document.querySelectorAll('.hidden')
+        hiddenElements.forEach(e => observer.observe(e))
+    </script>
+
+</html>
